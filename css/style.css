@@ -1,0 +1,542 @@
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Milonga&family=Montserrat:ital,wght@0,200;0,300;0,400;1,200&family=Sorts+Mill+Goudy:ital@0;1&display=swap');
+  
+*{
+	margin: 0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Amiri', serif;
+	color: #595334;
+}
+.container_1{
+	width: 100%;
+	height: 100vh;
+    background: #ede7e3;
+	position: relative;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	
+}
+.header{
+	position: fixed;
+}
+
+.logo a{
+	text-decoration: none;
+    font-family: 'Milonga', cursive;
+	margin-left: 900px;
+	position: relative;
+	top: 20px;
+    z-index: 2000;
+	animation: animlogo 1s 1s linear forwards;
+	opacity: 0;
+}
+@keyframes animlogo
+{
+	0%{
+		top: -100px;
+		opacity: 0;
+	}
+	100%{
+		top: 3px;
+		opacity: 1;
+	}
+}
+	
+
+#menuToggle 
+{
+  display: block;
+  position: relative;
+
+  top: 0px;
+  left: 50px;
+  -webkit-user-select: none;
+  user-select: none;
+	z-index: 2000;
+	animation: animmenu 2s 1s linear forwards;
+	opacity: 0;
+}
+
+@keyframes animmenu
+{
+	0%{
+		opacity: 0;
+		left: -100px;
+	}
+	100%{
+		opacity: 1;
+		left: 30px;
+	}
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0;
+  z-index: 2;
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background:  #C7A48B;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #ede7e3;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 200px;
+  
+  background:  #C7A48B;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+	
+}
+
+#menu li
+{
+  padding: 30px 0;
+  font-size: 32px;
+  color: #ede7e3;
+  text-align: center;
+}
+
+#menu li:hover
+{
+	color: #595334;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.main{
+	 width: 1400px;
+	height: 780px;
+/*	background: #A88761;*/
+	margin: 0 auto;
+	
+	
+}
+.banner{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	
+}
+
+.noidung{
+	width: 70%;
+	padding: 20px;
+	
+}
+
+.noidung h1{
+	margin-top: 380px;
+	font-size: 45pt;
+/*	text-transform: uppercase;*/
+	letter-spacing: 2px;
+	word-spacing: 5px;
+	line-height: 1.2;
+
+}
+
+
+.nen{
+	width: 30%;
+	padding: 20px;
+}
+.image{
+	width: 100%;
+	overflow: hidden;
+	margin-top: 300px;
+	position: relative;
+	animation: animnen 2s 1.5s linear forwards;
+	opacity: 0;
+}
+
+@keyframes animnen
+{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.image img{
+	width: 100%;
+}
+
+.about{
+	width: 1400px;
+	height: 780px;
+	margin: 0 auto;
+}
+
+.container{
+	width: 100%;
+	height: 100%;
+/*	background: lightgray;*/
+	display: flex;
+}
+
+
+
+.image_1 {
+  position: relative;
+  width: 40%;
+  padding: 20px;
+}
+
+.image_1 img{
+  margin-top: 200px;
+  margin-left: 30px;
+  display: block;
+  width: 100%;
+  max-width: 400px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  overflow: hidden;
+
+}
+
+.image_1:hover .overlay {
+  opacity: 1;
+}
+
+.overlay img {
+  width: 100%;
+}
+
+.noidung_1{
+	width: 60%;
+/*	background: #ede7e3;*/
+	padding: 50px;
+	position: relative; 
+	animation: animnoidung_1 1.5s 4s linear forwards;
+	opacity: 0;
+}
+
+@keyframes animnoidung_1{
+	0%{
+		top: 200px;
+		opacity: 0;
+	}
+	100%{
+		top: 0px;
+		opacity: 1;
+	}
+}
+
+
+
+.info ul{
+	margin-left: 100px;
+}	
+	
+.services{
+	width: 100%;
+	height: 600px;
+	background: #ede7e3;
+}
+
+.feature{
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.card{
+	width: 30%;
+	height: 150px;
+	float: left;
+	margin: 10px;
+	
+	
+}
+
+.flip-card {
+  background-color: transparent;
+  height: 242px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  animation: animcard 2s 6s linear forwards;
+  opacity: 0;
+}
+
+@keyframes animcard
+{
+	0%{
+		opacity: 0;
+		left: -100px;
+	}
+	100%{
+		opacity: 1;
+		left: 0;
+	}
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front, .flip-card-back_1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front, .flip-card-back_2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+
+  background: url("../img/cloves-5178023_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back_1 {
+
+  background: url("../img/flower-6761262_1920.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back_2 {
+
+  background: url("../img/plant-3972699_1920.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	overflow: hidden;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.more{
+	width: 100%;
+	height: 40px;
+/*	background: orange;*/
+	margin-top: 320px;
+	position: relative;
+	animation: animmore 2s 6s linear forwards;
+	opacity: 0;
+}
+ @keyframes animmore
+{
+	0%{
+		opacity: 0;
+		right: -100px;
+	}
+	100%{
+		opacity: 1;
+		right: 0;
+	}
+}
+
+.more a{
+	text-decoration: none;
+	color: #C7A48B;
+	background: white;
+	padding: 15px;
+	border-radius: 20px;
+	
+}
+
+
+
+
+.more a:hover{
+	background: #C7A48B;
+	color: white;
+}
+
+.hai{
+	width: 100%;
+	height: 100vh;
+}
+
+.letter{
+	width: 80%;
+	margin-left: 250px;
+	padding-top: 300px;
+}
+
+.nutmore{
+	margin-top: 50px;
+	margin-left: 250px;
+}
+.nutmore a{
+	text-decoration: none;
+	color: white ;
+	background: #595334;
+	padding: 15px;
+	border-radius: 20px;
+
+}
+
+.nutmore a:hover{
+	background: #ede7e3 ;
+	color: #595334;
+}
+
+.form_1{
+	width: 100%;
+	height: 600px;
+	background: url("../img/tulips-2068692_1920.jpg");
+	background-size: cover;
+}
+
+.form_a{
+	width: 100%;
+	height: 600px;
+	padding: 100px;
+	padding-top: 150px;
+	box-sizing: border-box;
+}
+
+input{
+	width: 600px;
+	height: 40px;
+	padding: 20px;
+	background: rgba(249,247,247,0.4);
+	border-radius: 5px;
+	border: 1px solid #C7A48B;
+	color:  #595334;
+	outline: none;
+}
+textarea{
+	width: 600px;
+	height: 200px;
+	padding: 20px;
+	background: rgba(249,247,247,0.4);
+	border-radius: 5px;
+	border: 1px solid #C7A48B;
+	color:  #595334;
+	outline: none;
+	
+}
+
+button{
+	width: 100px;
+	height: 35px;
+	background: #ede7e3;
+	border-radius: 5px;
+	border: 1px solid #C7A48B;
+}
+
+
